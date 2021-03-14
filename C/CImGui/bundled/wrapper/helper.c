@@ -23,6 +23,9 @@ ImVec2 ImGuiIO_Get_DisplayFramebufferScale(ImGuiIO* io) { return io->DisplayFram
 bool ImGuiIO_Get_MouseDrawCursor(ImGuiIO* io) { return io->MouseDrawCursor; }
 bool ImGuiIO_Get_ConfigMacOSXBehaviors(ImGuiIO* io) { return io->ConfigMacOSXBehaviors; }
 bool ImGuiIO_Get_ConfigInputTextCursorBlink(ImGuiIO* io) { return io->ConfigInputTextCursorBlink; }
+bool ImGuiIO_Get_ConfigDragClickToInputText(ImGuiIO* io) { return io->ConfigDragClickToInputText; }
+
+
 bool ImGuiIO_Get_ConfigWindowsResizeFromEdges(ImGuiIO* io) { return io->ConfigWindowsResizeFromEdges; }
 bool ImGuiIO_Get_ConfigWindowsMoveFromTitleBarOnly(ImGuiIO* io) { return io->ConfigWindowsMoveFromTitleBarOnly; }
 const char* ImGuiIO_Get_BackendPlatformName(ImGuiIO* io) { return io->BackendPlatformName; }
@@ -35,7 +38,6 @@ void* ImGuiIO_Get_BackendLanguageUserData(ImGuiIO* io) { return io->BackendLangu
 // void* ClipboardUserData;
 // void (*ImeSetInputScreenPosFn)(int x, int y);
 void* ImGuiIO_Get_ImeWindowHandle(ImGuiIO* io) { return io->ImeWindowHandle; }
-void* ImGuiIO_Get_RenderDrawListsFnUnused(ImGuiIO* io) { return io->RenderDrawListsFnUnused; }
 ImVec2 ImGuiIO_Get_MousePos(ImGuiIO* io) { return io->MousePos; }
 bool ImGuiIO_Get_MouseDown(ImGuiIO* io, int i) { return io->MouseDown[i]; }
 float ImGuiIO_Get_MouseWheel(ImGuiIO* io) { return io->MouseWheel; }
@@ -100,6 +102,7 @@ void ImGuiIO_Set_DisplayFramebufferScale(ImGuiIO* io, ImVec2 x) { io->DisplayFra
 void ImGuiIO_Set_MouseDrawCursor(ImGuiIO* io, bool x) { io->MouseDrawCursor = x; }
 void ImGuiIO_Set_ConfigMacOSXBehaviors(ImGuiIO* io, bool x) { io->ConfigMacOSXBehaviors = x; }
 void ImGuiIO_Set_ConfigInputTextCursorBlink(ImGuiIO* io, bool x) { io->ConfigInputTextCursorBlink = x; }
+void ImGuiIO_Set_ConfigDragClickToInputText(ImGuiIO* io, bool x) { io->ConfigDragClickToInputText = x; }
 void ImGuiIO_Set_ConfigWindowsResizeFromEdges(ImGuiIO* io, bool x) { io->ConfigWindowsResizeFromEdges = x; }
 void ImGuiIO_Set_ConfigWindowsMoveFromTitleBarOnly(ImGuiIO* io, bool x) { io->ConfigWindowsMoveFromTitleBarOnly = x; }
 void ImGuiIO_Set_BackendPlatformName(ImGuiIO* io, const char* x) { io->BackendPlatformName = x; }
@@ -112,7 +115,6 @@ void ImGuiIO_Set_SetClipboardTextFn(ImGuiIO* io, void* x) { io->SetClipboardText
 void ImGuiIO_Set_ClipboardUserData(ImGuiIO* io, void* x) { io->ClipboardUserData = x; }
 void ImGuiIO_Set_ImeSetInputScreenPosFn(ImGuiIO* io, void* x) { io->ImeSetInputScreenPosFn = x; }
 void ImGuiIO_Set_ImeWindowHandle(ImGuiIO* io, void* x) { io->ImeWindowHandle = x; }
-void ImGuiIO_Set_RenderDrawListsFnUnused(ImGuiIO* io, void* x) { io->RenderDrawListsFnUnused = x; }
 void ImGuiIO_Set_MousePos(ImGuiIO* io, ImVec2 x) { io->MousePos = x; }
 void ImGuiIO_Set_MouseDown(ImGuiIO* io, int i, bool x) { io->MouseDown[i] = x; }
 void ImGuiIO_Set_MouseWheel(ImGuiIO* io, float x) { io->MouseWheel = x; }
